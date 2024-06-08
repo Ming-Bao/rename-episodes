@@ -5,7 +5,7 @@ offset = int(input("What episode to start at:"))
 fileExtention = input("What is the file Extention:")
 currentFilename = os.path.basename(__file__)
 
-files = [f for f in os.listdir() if os.path.isfile(f) and f != currentFilename]
+files = [f for f in os.listdir() if os.path.isfile(f) and f != currentFilename and f.split('.')[1] !="exe"]
 files.sort
 numPad = len(str(len(files)))
 
